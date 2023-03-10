@@ -22,9 +22,9 @@ for (let i = 0; i < question.length; i++) {
   console.log(i);
   let rightAnswer = askQuestion(question[i], answer[i]);
   if (rightAnswer === true) {
-    alert('Correct! ${guessName} You guessed it right! Good-job!');
+    alert('Correct! You guessed it right! Good-job!');
   } else {
-    alert('Wrong answer ${guessName} better luck next time!');
+    alert('Wrong answer better luck next time!');
   }
 } 
 
@@ -34,9 +34,9 @@ function test(){
     let response = prompt(question[i]).toLowerCase();
     let rightAnswer = askQuestion(question[i], answer[i]);
     if (response === 'yes' || response === 'y') {
-      alert('Correct! ${guessName} You guessed it right! Good-job!');
+      alert('Correct! You guessed it right! Good-job!');
     } else {
-      alert('Wrong answer ${guessName} better luck next time!');
+      alert('Wrong answer better luck next time!');
     }
   }
 }
