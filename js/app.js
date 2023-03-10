@@ -5,65 +5,42 @@ let guessName = prompt('What is your name?');
 // console.log(`Welcome to my page ${guessName}! Please answer yes or no to a few quick questions.`);
 alert(`Welcome to my page ${guessName}! Please answer yes or no to a few quick questions.`);
 
-function vacation() {
-  let questionOne = prompt('Would I ever go to Disney World?').toUpperCase();
-  if(questionOne === 'YES' || questionOne === 'Y') {
-  // console.log(`Correct ${guessName}! We should go back!`);
-    alert(`Correct ${guessName}! I would love to soon!`);
-  } else if (questionOne === 'NO' || questionOne === 'N') {
-    //  console.log(`Wrong ${guessName}, but do not feel bad I have not been neither!`);
-    alert(`Wrong answer ${guessName}, I just haven't had the chance to go there yet.`);
-  }
-}
-vacation();
+let question = ['Would I ever go to Disney World?', 'Did I have a good day?', 'Have you ever played Monopoly?', 'Would I ever go sky diving?', 'Would I ever go sky diving?', 'Do you I social media?'];
 
-function moodToday() {
-  let questionTwo = prompt('Did I have a good day?').toUpperCase();
-  if(questionTwo === 'YES' || questionTwo === 'Y') {
-    // console.log(`Correct! ${guessName} I am glad to hear that!`);
-    alert(`Correct! ${guessName} I try to see the brighter side of everyday!`);
-  } else if (questionTwo === 'NO' || questionTwo === 'N') {
-  // console.log(`WRONG! ${guessName} today was pretty good to me!`);
-    alert(`WRONG! Everyday has some good to it ${guessName}!`);
-  }
-}
-moodToday();
+let answer = ['yes', 'yes', 'yes', 'yes','yes','yes']; 
 
-function games() {
-  let questionThree = prompt('Have you ever played Monopoly?').toUpperCase();
-  if(questionThree === 'YES' || questionThree === 'Y') {
-  // console.log(`Right Answer ${guessName}! I love that game.`);
-    alert(`Right Answer ${guessName}! I love that game.`);
-  } else if (questionThree === 'NO' || questionThree === 'N') {
-  // console.log(`Wrong Answer! You are missing out on some fun ${guessName}!`);
-    alert(`Wrong Answer! You are missing out on some fun ${guessName}!`);
-  }
+function askQuestion(question, answer) {
+  let response = prompt(question).toLowerCase();
+  if (response === answer) {
+    return true;
+  } else {
+    return false;
+  } 
 }
-games();
 
-function adventureSeeker() {
-  let questionFour = prompt('Would I ever go sky diving?').toUpperCase();
-  if(questionFour === 'YES' || questionFour === 'Y') {
-  // console.log(`True! ${guessName}! I hope to go someday.`);
-    alert(`True! ${guessName}! I hope to go someday.`);
-  } else if (questionFour === 'NO' || questionFour === 'N') {
-  // console.log(`Incorrect ${guessName}! I wish you would at least try.`);
-    alert(`Incorrect ${guessName}! I hope to at least try one day.`);
+for (let i = 0; i < question.length; i++) {
+  console.log(i);
+  let rightAnswer = askQuestion(question[i], answer[i]);
+  if (rightAnswer === true) {
+    alert('yayyy! You got it right!');
+  } else {
+    alert('Wrong answer, but good try!');
   }
 }
-adventureSeeker();
 
-function socialSites() {
-  let questionFive = prompt('Do you I social media?').toUpperCase();
-  if(questionFive === 'YES' || questionFive === 'Y') {
-  // console.log(`${guessName}! Right Answer! We should follow eachother on one ${guessName}!`);
-    alert(`Right Answer! We should follow eachother on one ${guessName}! `);
-  } else if (questionFive === 'NO' || questionFive === 'N') {
-  // console.log(`${guessName}! Incorrect! Give it one last try please.`);
-    alert(`${guessName}! Incorrect! I love TikTok to much to give it up!`);
+function test(){
+  for (let i = 0; i < question.length; i++) {
+    console.log(i);
+    let response = prompt(question[i]).toLowerCase();
+    let rightAnswer = askQuestion(question[i], answer[i]);
+    if (response === 'yes' || response === 'y') {
+      alert('yayyy! You got it right!');
+    } else {
+      alert('Wrong answer, but good try!');
+    }
   }
 }
-socialSites();
+test();
 
 
 function guessingGame() {
