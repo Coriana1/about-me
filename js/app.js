@@ -1,13 +1,11 @@
 'use strict';
-// console.log('Hello World');
 
 let guessName = prompt('What is your name?');
-// console.log(`Welcome to my page ${guessName}! Please answer yes or no to a few quick questions.`);
-alert(`Welcome to my page ${guessName}! Please answer yes or no to a few quick questions.`);
+alert(`Welcome to my page ${guessName}! Let's play a game! Guess yes or no to a few questions about me.`);
 
-let question = ['Would I ever go to Disney World?', 'Did I have a good day?', 'Have you ever played Monopoly?', 'Would I ever go sky diving?', 'Would I ever go sky diving?', 'Do you I social media?'];
+let question = ['Would I ever go to Disney World?', 'Did I have a good day?', 'Have I ever played Monopoly?', 'Would I ever go sky diving?', 'Do you I social media?'];
 
-let answer = ['yes', 'yes', 'yes', 'yes','yes','yes']; 
+let answer = ['yes', 'yes', 'yes', 'yes','yes'];
 
 function askQuestion(question, answer) {
   let response = prompt(question).toLowerCase();
@@ -15,16 +13,6 @@ function askQuestion(question, answer) {
     return true;
   } else {
     return false;
-  } 
-}
-
-for (let i = 0; i < question.length; i++) {
-  console.log(i);
-  let rightAnswer = askQuestion(question[i], answer[i]);
-  if (rightAnswer === true) {
-    alert('Correct! You guessed it right! Good-job!');
-  } else {
-    alert('Wrong answer better luck next time!');
   }
 } 
 
@@ -41,7 +29,6 @@ function test(){
   }
 }
 test();
-
 
 function guessingGame() {
   let myNumber = 17;
@@ -64,7 +51,6 @@ function guessingGame() {
   }
 }
 guessingGame();
-
 
 function myFavorite() {
   let favColor = ['black', 'red', 'yellow', 'blue'];

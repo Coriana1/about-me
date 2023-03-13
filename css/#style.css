@@ -1,0 +1,43 @@
+body {
+  background-color: maroon;
+  margin: 2;
+  padding: 2;
+  font-family:'Times New Roman', Times, serif;
+}
+
+h1 {
+  font-size: 8vw;
+  color: blanchedalmond;
+  float: center;
+  text-shadow: 10px 10px 10px red;
+}
+
+p {
+  color: blanchedalmond;
+  background-color: transparent;
+}
+
+ul {
+  font-size: 2vw;
+  background-color: darkolivegreen;
+  color: blanchedalmond;
+  border: 7px solid black;
+  display: inline-block;
+  padding: 6px;
+}
+
+h2 {
+  font-size: 2vw;
+  color: blanchedalmond;
+  float: center;
+  text-shadow: 10px 10px 10px red;
+}
+
+ol {
+  font-size: 2vw;
+  background-color: darkolivegreen;
+  color: blanchedalmond;
+  border: 7px solid black;
+  display: inline-block;
+  padding: 6px;
+}
